@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    </head>
+    <body>
+        <main class="container-fluid" style="height: 95vh;">
+            <article class="grid">
+                <div style="grid-column: span 2;">
+                    <aside>
+                        {% include nav.html %}
+                    </aside>
+                </div>
+
+                <div style="grid-column: span 8;">
+                    <article>
+                        {{ content }}
+                    </article>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>

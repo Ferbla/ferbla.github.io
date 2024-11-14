@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  my-jekyll-container:
+    image: my-ruby-env:latest
+    container_name: local_jekyll
+    restart: always
+    tty: true
+    ports:
+      - "4000:4000"
+networks:
+  my-network:
+    driver: bridge
