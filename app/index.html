@@ -1,5 +1,18 @@
 ---
 layout: default
-title: Home
+title: Blog
 ---
-<h1>{{ "Hello World"}}</h1>
+<h1>Latest Posts</h1>
+
+<ul>
+    {% for post in site.posts %}
+    <li style="list-style-type: none;">
+        <article>
+            <h2>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h2>
+            {{ post.excerpt }}
+        </article>
+    </li>
+    {% endfor %}
+</ul>
